@@ -1,0 +1,1 @@
+/bin/c++  -g   CMakeFiles/iad2_projekt.dir/project/src/Aplikacja.cpp.o CMakeFiles/iad2_projekt.dir/project/src/Funkcja.cpp.o CMakeFiles/iad2_projekt.dir/project/src/Dane.cpp.o CMakeFiles/iad2_projekt.dir/project/src/Warstwa.cpp.o CMakeFiles/iad2_projekt.dir/project/src/Siec.cpp.o CMakeFiles/iad2_projekt.dir/project/src/Losowanie.cpp.o  -o iad2_projekt 
