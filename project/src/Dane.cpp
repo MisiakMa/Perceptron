@@ -29,15 +29,18 @@ void DataManager::normalize(double const &low, double const &high) {
 	wyjscie2.resize(wyjscia);
 	wektorWyjsciowy1.resize(wyjscia);
 	wektorWyjsciowy2.resize(wyjscia);
+
+    //^^Wszystko powyzej to ustawienie vecotorow na rozmiar jakies zmiennej ktora gdzies podajemy
 	
 	for(unsigned int j = 0; j < wejscia; ++j)
 	{
 		wejscieMin[j] = daneWejsciowe[0][j];
 		wejscieMax[j] = daneWejsciowe[0][j];
 	}
-	
+	//^^Wypelniamy oba wektory...tymi samymi wartosciami?Potem sa one sortowane na zasadzie min max
 	for(unsigned int i = 1; i < sets; ++i)
 	{
+		//^^ilosc przebiegow czyli setowm, zestawow, tez stala,  ilosc zestawow chyba
 		for(unsigned int j = 0; j < wejscia; ++j)
 		{
 			if(daneWejsciowe[i][j] < wejscieMin[j])
@@ -48,6 +51,7 @@ void DataManager::normalize(double const &low, double const &high) {
 			{
 				wejscieMax[j] = daneWejsciowe[i][j];
 			}
+			//^^To sortowanie, chyba
 		}
 	}
 	
@@ -55,14 +59,20 @@ void DataManager::normalize(double const &low, double const &high) {
 	{
 		if(wejscieMax[j] != wejscieMin[j])
 		{
+			/*Wrzucenie do wejscia1 i 2 wartosci na podstawie wzoru jak nizej, po co nie wiem
+			 *
+			 * TODO O co tu chodzi
+			 */
 			wejscie1[j] = (high - low) / (wejscieMax[j] - wejscieMin[j]);
 			wejscie2[j] = low - wejscieMin[j] * wejscie1[j];
-
 			wektorWejsciowy1[j] = (wejscieMax[j] - wejscieMin[j]) / (high - low);
 			wektorWejsciowy2[j] = wejscieMin[j] - low * wektorWejsciowy1[j];
 		}
 		else
 		{
+			/*
+			 * TODO Jak wyzej
+			 */
 			wejscie1[j] = 1.0;
 			wejscie2[j] = (low + high) * 0.5 - wejscieMin[j];
 			wektorWejsciowy1[j] = 1.0;
@@ -74,6 +84,10 @@ void DataManager::normalize(double const &low, double const &high) {
 	{
 		for(unsigned int j = 0; j < wejscia; ++j)
 		{
+			/*Dla kazdego zestawu obliczamy dane wejsciowe dla kazdego wejscia tak jak nizej
+			 * TODO zrozumiec ten wzor
+			 *
+			 */
 			daneWejsciowe[i][j] = wejscie1[j] * daneWejsciowe[i][j] + wejscie2[j];
 		}
 	}
@@ -83,6 +97,7 @@ void DataManager::normalize(double const &low, double const &high) {
 	{
 		wyjscieMin[j] = daneOczekiwane[0][j];
 		wyjscieMax[j] = daneOczekiwane[0][j];
+		//TODO Tez nie wiem czemu to jest przypisywane
 	}
 	
 	for(unsigned int i = 1; i < sets; ++i)
@@ -91,6 +106,9 @@ void DataManager::normalize(double const &low, double const &high) {
 		{
 			if(daneOczekiwane[i][j] < wyjscieMin[j])
 			{
+				/*"Sortowanie" takl jak w przypadku wejsc na podstawie tego warunku
+				 *
+				 */
 				wyjscieMin[j] = daneOczekiwane[i][j];
 			} else if(daneOczekiwane[i][j] > wyjscieMax[j])
 			{
@@ -107,7 +125,10 @@ void DataManager::normalize(double const &low, double const &high) {
 			wyjscie2[j] = low - wyjscieMin[j] * wyjscie1[j];
 			wektorWyjsciowy1[j] = (wyjscieMax[j] - wyjscieMin[j]) / (high - low);
 			wektorWyjsciowy2[j] = wyjscieMin[j] - low * wektorWyjsciowy1[j];
-
+			/*
+			 * Obliczanie wartosci wyjsc, nie mam pojecia czemu tak
+			 * TODO ogarnac
+			 */
 
 			cout<<"high: "<<high<<endl;
 			cout<<"low: "<<low<<endl;
@@ -121,7 +142,7 @@ void DataManager::normalize(double const &low, double const &high) {
 
 
 
-
+			//TODO 25.04 tu skonczylem @Adrian
 		}
 		else
 		{
