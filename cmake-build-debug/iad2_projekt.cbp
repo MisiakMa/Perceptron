@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/pobi/Downloads/iad2-projekt/cmake-build-debug"/>
+				<Option working_dir="/home/pobi/Downloads/Perceptron/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/iad2-projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/iad2-projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/iad2-projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/iad2-projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/Perceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/Perceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/Perceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/Perceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/pobi/Downloads/iad2-projekt/cmake-build-debug"/>
+				<Option working_dir="/home/pobi/Downloads/Perceptron/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/iad2-projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/iad2-projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/iad2-projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/iad2-projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/Perceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/Perceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/Perceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/Perceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/pobi/Downloads/iad2-projekt/cmake-build-debug"/>
+				<Option working_dir="/home/pobi/Downloads/Perceptron/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/iad2-projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/iad2-projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/iad2-projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/iad2-projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/Perceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/Perceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/Perceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/Perceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="iad2_projekt">
-				<Option output="/home/pobi/Downloads/iad2-projekt/cmake-build-debug/iad2_projekt" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/pobi/Downloads/iad2-projekt/cmake-build-debug"/>
+				<Option output="/home/pobi/Downloads/Perceptron/cmake-build-debug/iad2_projekt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/pobi/Downloads/Perceptron/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -52,15 +52,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/iad2-projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 iad2_projekt"/>
-					<CompileFile command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/iad2-projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/iad2-projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/iad2-projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/Perceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 iad2_projekt"/>
+					<CompileFile command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/Perceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/Perceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/Perceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="iad2_projekt/fast">
-				<Option output="/home/pobi/Downloads/iad2-projekt/cmake-build-debug/iad2_projekt" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/pobi/Downloads/iad2-projekt/cmake-build-debug"/>
+				<Option output="/home/pobi/Downloads/Perceptron/cmake-build-debug/iad2_projekt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/pobi/Downloads/Perceptron/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -73,71 +73,71 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/iad2-projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 iad2_projekt/fast"/>
-					<CompileFile command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/iad2-projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/iad2-projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/iad2-projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/Perceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 iad2_projekt/fast"/>
+					<CompileFile command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/Perceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/Perceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/bin/gmake -j2 -f &quot;/home/pobi/Downloads/Perceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/pobi/Downloads/iad2-projekt/data/data1.in">
+		<Unit filename="/home/pobi/Downloads/Perceptron/data/data1.in">
 			<Option target="iad2_projekt"/>
 		</Unit>
-		<Unit filename="/home/pobi/Downloads/iad2-projekt/data/iris.in">
+		<Unit filename="/home/pobi/Downloads/Perceptron/data/iris.in">
 			<Option target="iad2_projekt"/>
 		</Unit>
-		<Unit filename="/home/pobi/Downloads/iad2-projekt/iris/processiris.sh">
+		<Unit filename="/home/pobi/Downloads/Perceptron/iris/processiris.sh">
 			<Option target="iad2_projekt"/>
 		</Unit>
-		<Unit filename="/home/pobi/Downloads/iad2-projekt/project/Makefile">
+		<Unit filename="/home/pobi/Downloads/Perceptron/project/Makefile">
 			<Option target="iad2_projekt"/>
 		</Unit>
-		<Unit filename="/home/pobi/Downloads/iad2-projekt/project/src/Aplikacja.cpp">
+		<Unit filename="/home/pobi/Downloads/Perceptron/project/src/Aplikacja.cpp">
 			<Option target="iad2_projekt"/>
 		</Unit>
-		<Unit filename="/home/pobi/Downloads/iad2-projekt/project/src/Dane.cpp">
+		<Unit filename="/home/pobi/Downloads/Perceptron/project/src/Dane.cpp">
 			<Option target="iad2_projekt"/>
 		</Unit>
-		<Unit filename="/home/pobi/Downloads/iad2-projekt/project/src/Dane.hpp">
+		<Unit filename="/home/pobi/Downloads/Perceptron/project/src/Dane.hpp">
 			<Option target="iad2_projekt"/>
 		</Unit>
-		<Unit filename="/home/pobi/Downloads/iad2-projekt/project/src/Funkcja.cpp">
+		<Unit filename="/home/pobi/Downloads/Perceptron/project/src/Funkcja.cpp">
 			<Option target="iad2_projekt"/>
 		</Unit>
-		<Unit filename="/home/pobi/Downloads/iad2-projekt/project/src/Funkcja.hpp">
+		<Unit filename="/home/pobi/Downloads/Perceptron/project/src/Funkcja.hpp">
 			<Option target="iad2_projekt"/>
 		</Unit>
-		<Unit filename="/home/pobi/Downloads/iad2-projekt/project/src/Losowanie.cpp">
+		<Unit filename="/home/pobi/Downloads/Perceptron/project/src/Losowanie.cpp">
 			<Option target="iad2_projekt"/>
 		</Unit>
-		<Unit filename="/home/pobi/Downloads/iad2-projekt/project/src/Losowanie.hpp">
+		<Unit filename="/home/pobi/Downloads/Perceptron/project/src/Losowanie.hpp">
 			<Option target="iad2_projekt"/>
 		</Unit>
-		<Unit filename="/home/pobi/Downloads/iad2-projekt/project/src/Siec.cpp">
+		<Unit filename="/home/pobi/Downloads/Perceptron/project/src/Siec.cpp">
 			<Option target="iad2_projekt"/>
 		</Unit>
-		<Unit filename="/home/pobi/Downloads/iad2-projekt/project/src/Siec.hpp">
+		<Unit filename="/home/pobi/Downloads/Perceptron/project/src/Siec.hpp">
 			<Option target="iad2_projekt"/>
 		</Unit>
-		<Unit filename="/home/pobi/Downloads/iad2-projekt/project/src/Warstwa.cpp">
+		<Unit filename="/home/pobi/Downloads/Perceptron/project/src/Warstwa.cpp">
 			<Option target="iad2_projekt"/>
 		</Unit>
-		<Unit filename="/home/pobi/Downloads/iad2-projekt/project/src/Warstwa.hpp">
+		<Unit filename="/home/pobi/Downloads/Perceptron/project/src/Warstwa.hpp">
 			<Option target="iad2_projekt"/>
 		</Unit>
-		<Unit filename="/home/pobi/Downloads/iad2-projekt/utils/log2data.py">
+		<Unit filename="/home/pobi/Downloads/Perceptron/utils/log2data.py">
 			<Option target="iad2_projekt"/>
 		</Unit>
-		<Unit filename="/home/pobi/Downloads/iad2-projekt/utils/opissieci.py">
+		<Unit filename="/home/pobi/Downloads/Perceptron/utils/opissieci.py">
 			<Option target="iad2_projekt"/>
 		</Unit>
-		<Unit filename="/home/pobi/Downloads/iad2-projekt/utils/plotmaker.sh">
+		<Unit filename="/home/pobi/Downloads/Perceptron/utils/plotmaker.sh">
 			<Option target="iad2_projekt"/>
 		</Unit>
-		<Unit filename="/home/pobi/Downloads/iad2-projekt/utils/przebieg.py">
+		<Unit filename="/home/pobi/Downloads/Perceptron/utils/przebieg.py">
 			<Option target="iad2_projekt"/>
 		</Unit>
-		<Unit filename="/home/pobi/Downloads/iad2-projekt/CMakeLists.txt">
+		<Unit filename="/home/pobi/Downloads/Perceptron/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
