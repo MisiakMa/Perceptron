@@ -16,6 +16,7 @@ using namespace std;
 
 int main(int argc, char **argv){
 
+    //********************************Perceptron************************************
 	// Constants
 	double const normalizeLow = .0625;
 	double const normalizeHigh = .9375;
@@ -33,7 +34,7 @@ int main(int argc, char **argv){
 	bool Bias = true;
 	double WspolczynnikNauki = 0.2;
 	double WspolczynnikMomentu = 0.0;
-	int IloscEpok = 100;
+	int IloscEpok = 1000;
     vector<unsigned int> layerSizes;
     layerSizes.push_back(4);
     layerSizes.push_back(2);
