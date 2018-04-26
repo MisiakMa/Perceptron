@@ -13,36 +13,36 @@ Funkcja aktywacji
 Warstwa.2 :3 Neurony
 Neuron 2.1
 Funkcja aktywacji
-Wagi wektora: (0.0523964)(-2.56711)(2.44483)(1.85481)Bias: -1.77583
+Wagi wektora: (-0.0400584)(-0.0416185)(0.331178)(0.412384)Bias: 0.262049
 Neuron 2.2
 Funkcja aktywacji
-Wagi wektora: (0.458291)(-7.3668)(7.07546)(4.23502)Bias: -3.60074
+Wagi wektora: (0.55069)(-0.395453)(0.735053)(0.376541)Bias: 0.0346506
 Neuron 2.3
 Funkcja aktywacji
-Wagi wektora: (5.59897)(3.00226)(-20.2057)(-14.0623)Bias: 17.8796
+Wagi wektora: (-0.170241)(-0.239995)(-0.545545)(-0.496589)Bias: 0.411213
 
 Warstwa.3 :4 Neurony
 Neuron 3.1
 Funkcja aktywacji
-Wagi wektora: (-4.24011)(-9.31114)(4.44779)Bias: -2.00107
+Wagi wektora: (-0.477192)(-0.668226)(-0.0212592)Bias: -0.46457
 Neuron 3.2
 Funkcja aktywacji
-Wagi wektora: (-1.07072)(-4.66152)(10.0271)Bias: 3.48186
+Wagi wektora: (-0.32553)(-1.01681)(0.663306)Bias: -0.640179
 Neuron 3.3
 Funkcja aktywacji
-Wagi wektora: (1.33422)(2.25164)(-1.77982)Bias: -0.161857
+Wagi wektora: (-0.496623)(-0.590425)(-0.00725026)Bias: -0.421257
 Neuron 3.4
 Funkcja aktywacji
-Wagi wektora: (0.513998)(4.53578)(-8.22668)Bias: 0.962671
+Wagi wektora: (-0.106718)(0.00815859)(-0.930184)Bias: -0.584193
 
 Warstwa.4 :3 Neurony
 Neuron 4.1
 Funkcja aktywacji
-Wagi wektora: (8.96107)(0.869556)(-4.93769)(-6.64391)Bias: -3.69564
+Wagi wektora: (-0.207963)(0.455133)(-0.296037)(-0.329977)Bias: -0.757835
 Neuron 4.2
 Funkcja aktywacji
-Wagi wektora: (-11.1459)(5.22396)(-0.839094)(-4.46592)Bias: 0.150853
+Wagi wektora: (-0.416639)(-0.24776)(-0.503066)(0.0201086)Bias: -0.399234
 Neuron 4.3
 Funkcja aktywacji
-Wagi wektora: (-2.22718)(-4.91633)(2.15868)(4.69105)Bias: -1.77478
+Wagi wektora: (-0.758657)(-0.996066)(-0.883872)(0.301208)Bias: -0.0994064
 

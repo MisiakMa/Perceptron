@@ -20,8 +20,8 @@ int main(int argc, char **argv){
 	// Constants
 
 
-	double const normalizeLow =0;// .0625;
-	double const normalizeHigh =1;// .9375;
+	double const normalizeLow = 0;//.0625;
+	double const normalizeHigh = 1;// .9375;
 	// End of constants
 
 
@@ -36,12 +36,13 @@ int main(int argc, char **argv){
 	bool Bias = true;
 	double WspolczynnikNauki = 0.6;
 	double WspolczynnikMomentu = 0.0;
-	int IloscEpok = 600;
+	int IloscEpok = 10;
     vector<unsigned int> layerSizes;
     layerSizes.push_back(4);
     layerSizes.push_back(3);
     layerSizes.push_back(4);
     layerSizes.push_back(3);
+
 
 
 

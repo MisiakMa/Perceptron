@@ -37,7 +37,9 @@ void DataManager::normalize(double const &low, double const &high) {
 		wejscieMax[j] = daneWejsciowe[0][j];
 	}
 	
-	for(unsigned int i = 1; i < sets; ++i)
+	for(unsigned int i = 1; i < sets; ++i)   // przechodzimy po kazdej kolumnie wzbiorze i szukamy najwiekszej i
+                                             // najmniejszej wartosci
+                                             //  w lini w danej kolumnie
 	{
         // szukanie najmniejszej i najwiekszej wartosci w danych wejsciowych
 
@@ -54,7 +56,7 @@ void DataManager::normalize(double const &low, double const &high) {
 		}
 	}
 	
-	for(unsigned int j = 0; j < wejscia; ++j)
+	for(unsigned int j = 0; j < wejscia; ++j)    // dla kazdej kolumny jest ustawiane dane wejscie
 	{
 		if(wejscieMax[j] != wejscieMin[j])
 		{
@@ -66,20 +68,16 @@ void DataManager::normalize(double const &low, double const &high) {
 			wejscie1[j] =(high - low) / (wejscieMax[j] - wejscieMin[j]);
 			wejscie2[j] =low - wejscieMin[j] * wejscie1[j];
 
-            cout<<"Moje wejscie max: "<<wejscieMax[j]<<endl;
-            cout<<"Moje wejscie min: "<<wejscieMin[j]<<endl;
-            cout<<"wejscie 1  "<<wejscie1[j]<<endl;
-            cout<<"wejscie 2  "<<wejscie2[j]<<endl;
-
-
-
+            cout<<"wejscie1   "<<wejscie1[j]<<endl;
+            cout<<"wejscie2   "<<wejscie2[j]<<endl;
+            cout<<"wejscieMin   "<<wejscieMin[j]<<endl;
+            cout<<"wejscieMax   "<<wejscieMax[j]<<endl;
 
             wektorWejsciowy1[j] =(wejscieMax[j] - wejscieMin[j]) / (high - low);
-            cout<<"wektor wejsciowy1  "<<wektorWejsciowy1[j] <<endl;
-
-
 			wektorWejsciowy2[j] =wejscieMin[j] - low * wektorWejsciowy1[j];
-            cout<<"wektor wejsciowy2  "<<wektorWejsciowy2[j] <<endl;
+            cout<<"wektorWejsciowy1:  "<<wektorWejsciowy1[j]<<endl;
+            cout<<"wektorWejsciowy2:  "<<wektorWejsciowy2[j]<<endl;
+
 
 
 
@@ -345,6 +343,7 @@ void DataManager::wyswietlenieWejscZdekodowanych(vector<double> const &data, ofs
 
     name<<" )"<<endl;
 	name<<"( ";
+    cout<<"( ";
 	for(unsigned int i = 0; i < data.size(); ++i) {
 
 		cout<<" "<<(wektorWejsciowy1[i]*data[i]+wektorWejsciowy2[i]);
@@ -370,7 +369,7 @@ void DataManager::wyswietlenieWyjscZdekodowanych(vector<double> const &data, ofs
 
 
 		cout<<" "<<(wektorWyjsciowy1[i]*data[i]+wektorWyjsciowy2[i]);
-		(wektorWyjsciowy1[i]*data[i]+wektorWyjsciowy2[i]);
+		//(wektorWyjsciowy1[i]*data[i]+wektorWyjsciowy2[i]);
 
 	}
 
