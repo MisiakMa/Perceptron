@@ -14,8 +14,8 @@ class DataManager {
 		vector<double> wektorWyjsciowy2;
 		vector<double> wektorWejsciowy1;
 		vector<double> wektorWejsciowy2;
-		vector<std::vector<double> > daneWejsciowe;
-		vector<std::vector<double> > daneOczekiwane;
+		vector<vector<double> > daneWejsciowe;
+		vector<vector<double> > daneOczekiwane;
 
 
 		

@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /bin/c++ 
@@ -23,33 +23,33 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/bin/gmake" "cmTC_29dcc/fast"
-/bin/gmake -f CMakeFiles/cmTC_29dcc.dir/build.make CMakeFiles/cmTC_29dcc.dir/build
+Run Build Command:"/bin/gmake" "cmTC_32439/fast"
+/bin/gmake -f CMakeFiles/cmTC_32439.dir/build.make CMakeFiles/cmTC_32439.dir/build
 gmake[1]: Entering directory '/home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_29dcc.dir/testCCompiler.c.o
-/bin/cc    -o CMakeFiles/cmTC_29dcc.dir/testCCompiler.c.o   -c /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_29dcc
-/home/pobi/Downloads/clion-2017.3.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_29dcc.dir/link.txt --verbose=1
-/bin/cc      CMakeFiles/cmTC_29dcc.dir/testCCompiler.c.o  -o cmTC_29dcc 
+Building C object CMakeFiles/cmTC_32439.dir/testCCompiler.c.o
+/bin/cc    -o CMakeFiles/cmTC_32439.dir/testCCompiler.c.o   -c /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_32439
+/home/pobi/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_32439.dir/link.txt --verbose=1
+/bin/cc      CMakeFiles/cmTC_32439.dir/testCCompiler.c.o  -o cmTC_32439 
 gmake[1]: Leaving directory '/home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/bin/gmake" "cmTC_efb38/fast"
-/bin/gmake -f CMakeFiles/cmTC_efb38.dir/build.make CMakeFiles/cmTC_efb38.dir/build
+Run Build Command:"/bin/gmake" "cmTC_ba718/fast"
+/bin/gmake -f CMakeFiles/cmTC_ba718.dir/build.make CMakeFiles/cmTC_ba718.dir/build
 gmake[1]: Entering directory '/home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_efb38.dir/CMakeCCompilerABI.c.o
-/bin/cc    -o CMakeFiles/cmTC_efb38.dir/CMakeCCompilerABI.c.o   -c /home/pobi/Downloads/clion-2017.3.2/bin/cmake/share/cmake-3.9/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_efb38
-/home/pobi/Downloads/clion-2017.3.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_efb38.dir/link.txt --verbose=1
-/bin/cc     -v CMakeFiles/cmTC_efb38.dir/CMakeCCompilerABI.c.o  -o cmTC_efb38 
+Building C object CMakeFiles/cmTC_ba718.dir/CMakeCCompilerABI.c.o
+/bin/cc    -o CMakeFiles/cmTC_ba718.dir/CMakeCCompilerABI.c.o   -c /home/pobi/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_ba718
+/home/pobi/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ba718.dir/link.txt --verbose=1
+/bin/cc     -v CMakeFiles/cmTC_ba718.dir/CMakeCCompilerABI.c.o  -o cmTC_ba718 
 Using built-in specs.
 COLLECT_GCC=/bin/cc
 COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/6.3.1/lto-wrapper
@@ -59,24 +59,24 @@ Thread model: posix
 gcc version 6.3.1 20161221 (Red Hat 6.3.1-1) (GCC) 
 COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/6.3.1/:/usr/libexec/gcc/x86_64-redhat-linux/6.3.1/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/6.3.1/:/usr/lib/gcc/x86_64-redhat-linux/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/6.3.1/:/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_efb38' '-mtune=generic' '-march=x86-64'
- /usr/libexec/gcc/x86_64-redhat-linux/6.3.1/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/6.3.1/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/6.3.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccFtJOs4.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_efb38 /usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/6.3.1/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/6.3.1 -L/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../.. CMakeFiles/cmTC_efb38.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/6.3.1/crtend.o /usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_efb38' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ba718' '-mtune=generic' '-march=x86-64'
+ /usr/libexec/gcc/x86_64-redhat-linux/6.3.1/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/6.3.1/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/6.3.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbbdsgU.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_ba718 /usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/6.3.1/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/6.3.1 -L/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../.. CMakeFiles/cmTC_ba718.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/6.3.1/crtend.o /usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ba718' '-mtune=generic' '-march=x86-64'
 gmake[1]: Leaving directory '/home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
-  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/bin/gmake" "cmTC_efb38/fast"]
-  ignore line: [/bin/gmake -f CMakeFiles/cmTC_efb38.dir/build.make CMakeFiles/cmTC_efb38.dir/build]
+  ignore line: [Run Build Command:"/bin/gmake" "cmTC_ba718/fast"]
+  ignore line: [/bin/gmake -f CMakeFiles/cmTC_ba718.dir/build.make CMakeFiles/cmTC_ba718.dir/build]
   ignore line: [gmake[1]: Entering directory '/home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_efb38.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/bin/cc    -o CMakeFiles/cmTC_efb38.dir/CMakeCCompilerABI.c.o   -c /home/pobi/Downloads/clion-2017.3.2/bin/cmake/share/cmake-3.9/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_efb38]
-  ignore line: [/home/pobi/Downloads/clion-2017.3.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_efb38.dir/link.txt --verbose=1]
-  ignore line: [/bin/cc     -v CMakeFiles/cmTC_efb38.dir/CMakeCCompilerABI.c.o  -o cmTC_efb38 ]
+  ignore line: [Building C object CMakeFiles/cmTC_ba718.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/bin/cc    -o CMakeFiles/cmTC_ba718.dir/CMakeCCompilerABI.c.o   -c /home/pobi/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_ba718]
+  ignore line: [/home/pobi/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ba718.dir/link.txt --verbose=1]
+  ignore line: [/bin/cc     -v CMakeFiles/cmTC_ba718.dir/CMakeCCompilerABI.c.o  -o cmTC_ba718 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/6.3.1/lto-wrapper]
@@ -86,13 +86,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 6.3.1 20161221 (Red Hat 6.3.1-1) (GCC) ]
   ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/6.3.1/:/usr/libexec/gcc/x86_64-redhat-linux/6.3.1/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/6.3.1/:/usr/lib/gcc/x86_64-redhat-linux/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/6.3.1/:/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_efb38' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/6.3.1/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/6.3.1/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/6.3.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccFtJOs4.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_efb38 /usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/6.3.1/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/6.3.1 -L/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../.. CMakeFiles/cmTC_efb38.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/6.3.1/crtend.o /usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ba718' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/6.3.1/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/6.3.1/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/6.3.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbbdsgU.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_ba718 /usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/6.3.1/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/6.3.1 -L/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../.. CMakeFiles/cmTC_ba718.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/6.3.1/crtend.o /usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/crtn.o]
     arg [/usr/libexec/gcc/x86_64-redhat-linux/6.3.1/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/libexec/gcc/x86_64-redhat-linux/6.3.1/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/6.3.1/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccFtJOs4.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccbbdsgU.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -107,7 +107,7 @@ Parsed C implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_efb38] ==> ignore
+    arg [cmTC_ba718] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/6.3.1/crtbegin.o] ==> ignore
@@ -116,7 +116,7 @@ Parsed C implicit link information from above output:
     arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
     arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
     arg [-L/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../..]
-    arg [CMakeFiles/cmTC_efb38.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_ba718.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -128,12 +128,16 @@ Parsed C implicit link information from above output:
     arg [--no-as-needed] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/6.3.1/crtend.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
   collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/6.3.1] ==> [/usr/lib/gcc/x86_64-redhat-linux/6.3.1]
   collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64] ==> [/usr/lib64]
   collapse library dir [/lib/../lib64] ==> [/lib64]
   collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
   collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../..] ==> [/usr/lib]
-  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+  implicit libs: [c]
   implicit dirs: [/usr/lib/gcc/x86_64-redhat-linux/6.3.1;/usr/lib64;/lib64;/usr/lib]
   implicit fwks: []
 
@@ -143,14 +147,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/bin/gmake" "cmTC_01b7a/fast"
-/bin/gmake -f CMakeFiles/cmTC_01b7a.dir/build.make CMakeFiles/cmTC_01b7a.dir/build
+Run Build Command:"/bin/gmake" "cmTC_d43a9/fast"
+/bin/gmake -f CMakeFiles/cmTC_d43a9.dir/build.make CMakeFiles/cmTC_d43a9.dir/build
 gmake[1]: Entering directory '/home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_01b7a.dir/feature_tests.c.o
-/bin/cc   -std=c11 -o CMakeFiles/cmTC_01b7a.dir/feature_tests.c.o   -c /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_01b7a
-/home/pobi/Downloads/clion-2017.3.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_01b7a.dir/link.txt --verbose=1
-/bin/cc      CMakeFiles/cmTC_01b7a.dir/feature_tests.c.o  -o cmTC_01b7a 
+Building C object CMakeFiles/cmTC_d43a9.dir/feature_tests.c.o
+/bin/cc   -std=c11 -o CMakeFiles/cmTC_d43a9.dir/feature_tests.c.o   -c /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_d43a9
+/home/pobi/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d43a9.dir/link.txt --verbose=1
+/bin/cc      CMakeFiles/cmTC_d43a9.dir/feature_tests.c.o  -o cmTC_d43a9 
 gmake[1]: Leaving directory '/home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -163,14 +167,14 @@ gmake[1]: Leaving directory '/home/pobi/Downloads/Perceptron/cmake-build-debug/C
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/bin/gmake" "cmTC_d9840/fast"
-/bin/gmake -f CMakeFiles/cmTC_d9840.dir/build.make CMakeFiles/cmTC_d9840.dir/build
+Run Build Command:"/bin/gmake" "cmTC_82212/fast"
+/bin/gmake -f CMakeFiles/cmTC_82212.dir/build.make CMakeFiles/cmTC_82212.dir/build
 gmake[1]: Entering directory '/home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d9840.dir/feature_tests.c.o
-/bin/cc   -std=c99 -o CMakeFiles/cmTC_d9840.dir/feature_tests.c.o   -c /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_d9840
-/home/pobi/Downloads/clion-2017.3.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d9840.dir/link.txt --verbose=1
-/bin/cc      CMakeFiles/cmTC_d9840.dir/feature_tests.c.o  -o cmTC_d9840 
+Building C object CMakeFiles/cmTC_82212.dir/feature_tests.c.o
+/bin/cc   -std=c99 -o CMakeFiles/cmTC_82212.dir/feature_tests.c.o   -c /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_82212
+/home/pobi/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_82212.dir/link.txt --verbose=1
+/bin/cc      CMakeFiles/cmTC_82212.dir/feature_tests.c.o  -o cmTC_82212 
 gmake[1]: Leaving directory '/home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -183,14 +187,14 @@ gmake[1]: Leaving directory '/home/pobi/Downloads/Perceptron/cmake-build-debug/C
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/bin/gmake" "cmTC_1d70b/fast"
-/bin/gmake -f CMakeFiles/cmTC_1d70b.dir/build.make CMakeFiles/cmTC_1d70b.dir/build
+Run Build Command:"/bin/gmake" "cmTC_5045d/fast"
+/bin/gmake -f CMakeFiles/cmTC_5045d.dir/build.make CMakeFiles/cmTC_5045d.dir/build
 gmake[1]: Entering directory '/home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1d70b.dir/feature_tests.c.o
-/bin/cc   -std=c90 -o CMakeFiles/cmTC_1d70b.dir/feature_tests.c.o   -c /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_1d70b
-/home/pobi/Downloads/clion-2017.3.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1d70b.dir/link.txt --verbose=1
-/bin/cc      CMakeFiles/cmTC_1d70b.dir/feature_tests.c.o  -o cmTC_1d70b 
+Building C object CMakeFiles/cmTC_5045d.dir/feature_tests.c.o
+/bin/cc   -std=c90 -o CMakeFiles/cmTC_5045d.dir/feature_tests.c.o   -c /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_5045d
+/home/pobi/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5045d.dir/link.txt --verbose=1
+/bin/cc      CMakeFiles/cmTC_5045d.dir/feature_tests.c.o  -o cmTC_5045d 
 gmake[1]: Leaving directory '/home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -201,28 +205,28 @@ gmake[1]: Leaving directory '/home/pobi/Downloads/Perceptron/cmake-build-debug/C
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/bin/gmake" "cmTC_5b66b/fast"
-/bin/gmake -f CMakeFiles/cmTC_5b66b.dir/build.make CMakeFiles/cmTC_5b66b.dir/build
+Run Build Command:"/bin/gmake" "cmTC_defcf/fast"
+/bin/gmake -f CMakeFiles/cmTC_defcf.dir/build.make CMakeFiles/cmTC_defcf.dir/build
 gmake[1]: Entering directory '/home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_5b66b.dir/testCXXCompiler.cxx.o
-/bin/c++     -o CMakeFiles/cmTC_5b66b.dir/testCXXCompiler.cxx.o -c /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_5b66b
-/home/pobi/Downloads/clion-2017.3.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5b66b.dir/link.txt --verbose=1
-/bin/c++       CMakeFiles/cmTC_5b66b.dir/testCXXCompiler.cxx.o  -o cmTC_5b66b 
+Building CXX object CMakeFiles/cmTC_defcf.dir/testCXXCompiler.cxx.o
+/bin/c++     -o CMakeFiles/cmTC_defcf.dir/testCXXCompiler.cxx.o -c /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_defcf
+/home/pobi/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_defcf.dir/link.txt --verbose=1
+/bin/c++       CMakeFiles/cmTC_defcf.dir/testCXXCompiler.cxx.o  -o cmTC_defcf 
 gmake[1]: Leaving directory '/home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/bin/gmake" "cmTC_c34b7/fast"
-/bin/gmake -f CMakeFiles/cmTC_c34b7.dir/build.make CMakeFiles/cmTC_c34b7.dir/build
+Run Build Command:"/bin/gmake" "cmTC_adbca/fast"
+/bin/gmake -f CMakeFiles/cmTC_adbca.dir/build.make CMakeFiles/cmTC_adbca.dir/build
 gmake[1]: Entering directory '/home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_c34b7.dir/CMakeCXXCompilerABI.cpp.o
-/bin/c++     -o CMakeFiles/cmTC_c34b7.dir/CMakeCXXCompilerABI.cpp.o -c /home/pobi/Downloads/clion-2017.3.2/bin/cmake/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_c34b7
-/home/pobi/Downloads/clion-2017.3.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c34b7.dir/link.txt --verbose=1
-/bin/c++      -v CMakeFiles/cmTC_c34b7.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_c34b7 
+Building CXX object CMakeFiles/cmTC_adbca.dir/CMakeCXXCompilerABI.cpp.o
+/bin/c++     -o CMakeFiles/cmTC_adbca.dir/CMakeCXXCompilerABI.cpp.o -c /home/pobi/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_adbca
+/home/pobi/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_adbca.dir/link.txt --verbose=1
+/bin/c++      -v CMakeFiles/cmTC_adbca.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_adbca 
 Using built-in specs.
 COLLECT_GCC=/bin/c++
 COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/6.3.1/lto-wrapper
@@ -232,24 +236,24 @@ Thread model: posix
 gcc version 6.3.1 20161221 (Red Hat 6.3.1-1) (GCC) 
 COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/6.3.1/:/usr/libexec/gcc/x86_64-redhat-linux/6.3.1/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/6.3.1/:/usr/lib/gcc/x86_64-redhat-linux/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/6.3.1/:/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c34b7' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/libexec/gcc/x86_64-redhat-linux/6.3.1/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/6.3.1/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/6.3.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKaQPPT.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_c34b7 /usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/6.3.1/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/6.3.1 -L/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../.. CMakeFiles/cmTC_c34b7.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/6.3.1/crtend.o /usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c34b7' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_adbca' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/libexec/gcc/x86_64-redhat-linux/6.3.1/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/6.3.1/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/6.3.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccJnKVe9.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_adbca /usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/6.3.1/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/6.3.1 -L/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../.. CMakeFiles/cmTC_adbca.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/6.3.1/crtend.o /usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_adbca' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
 gmake[1]: Leaving directory '/home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit link information from above output:
-  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/bin/gmake" "cmTC_c34b7/fast"]
-  ignore line: [/bin/gmake -f CMakeFiles/cmTC_c34b7.dir/build.make CMakeFiles/cmTC_c34b7.dir/build]
+  ignore line: [Run Build Command:"/bin/gmake" "cmTC_adbca/fast"]
+  ignore line: [/bin/gmake -f CMakeFiles/cmTC_adbca.dir/build.make CMakeFiles/cmTC_adbca.dir/build]
   ignore line: [gmake[1]: Entering directory '/home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_c34b7.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/bin/c++     -o CMakeFiles/cmTC_c34b7.dir/CMakeCXXCompilerABI.cpp.o -c /home/pobi/Downloads/clion-2017.3.2/bin/cmake/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_c34b7]
-  ignore line: [/home/pobi/Downloads/clion-2017.3.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c34b7.dir/link.txt --verbose=1]
-  ignore line: [/bin/c++      -v CMakeFiles/cmTC_c34b7.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_c34b7 ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_adbca.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/bin/c++     -o CMakeFiles/cmTC_adbca.dir/CMakeCXXCompilerABI.cpp.o -c /home/pobi/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_adbca]
+  ignore line: [/home/pobi/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_adbca.dir/link.txt --verbose=1]
+  ignore line: [/bin/c++      -v CMakeFiles/cmTC_adbca.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_adbca ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/6.3.1/lto-wrapper]
@@ -259,13 +263,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 6.3.1 20161221 (Red Hat 6.3.1-1) (GCC) ]
   ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/6.3.1/:/usr/libexec/gcc/x86_64-redhat-linux/6.3.1/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/6.3.1/:/usr/lib/gcc/x86_64-redhat-linux/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/6.3.1/:/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c34b7' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/6.3.1/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/6.3.1/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/6.3.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKaQPPT.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_c34b7 /usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/6.3.1/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/6.3.1 -L/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../.. CMakeFiles/cmTC_c34b7.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/6.3.1/crtend.o /usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_adbca' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/6.3.1/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/6.3.1/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/6.3.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccJnKVe9.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_adbca /usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/6.3.1/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/6.3.1 -L/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../.. CMakeFiles/cmTC_adbca.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/6.3.1/crtend.o /usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/crtn.o]
     arg [/usr/libexec/gcc/x86_64-redhat-linux/6.3.1/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/libexec/gcc/x86_64-redhat-linux/6.3.1/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/6.3.1/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccKaQPPT.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccJnKVe9.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -280,7 +284,7 @@ Parsed CXX implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_c34b7] ==> ignore
+    arg [cmTC_adbca] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/6.3.1/crtbegin.o] ==> ignore
@@ -289,7 +293,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
     arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
     arg [-L/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../..]
-    arg [CMakeFiles/cmTC_c34b7.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_adbca.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -299,12 +303,16 @@ Parsed CXX implicit link information from above output:
     arg [-lgcc] ==> lib [gcc]
     arg [/usr/lib/gcc/x86_64-redhat-linux/6.3.1/crtend.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64/crtn.o] ==> ignore
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
   collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/6.3.1] ==> [/usr/lib/gcc/x86_64-redhat-linux/6.3.1]
   collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../../../lib64] ==> [/usr/lib64]
   collapse library dir [/lib/../lib64] ==> [/lib64]
   collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
   collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/6.3.1/../../..] ==> [/usr/lib]
-  implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+  implicit libs: [stdc++;m;c]
   implicit dirs: [/usr/lib/gcc/x86_64-redhat-linux/6.3.1;/usr/lib64;/lib64;/usr/lib]
   implicit fwks: []
 
@@ -314,14 +322,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
 Change Dir: /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/bin/gmake" "cmTC_caeac/fast"
-/bin/gmake -f CMakeFiles/cmTC_caeac.dir/build.make CMakeFiles/cmTC_caeac.dir/build
+Run Build Command:"/bin/gmake" "cmTC_f2d56/fast"
+/bin/gmake -f CMakeFiles/cmTC_f2d56.dir/build.make CMakeFiles/cmTC_f2d56.dir/build
 gmake[1]: Entering directory '/home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_caeac.dir/feature_tests.cxx.o
-/bin/c++    -std=c++1z -o CMakeFiles/cmTC_caeac.dir/feature_tests.cxx.o -c /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_caeac
-/home/pobi/Downloads/clion-2017.3.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_caeac.dir/link.txt --verbose=1
-/bin/c++       CMakeFiles/cmTC_caeac.dir/feature_tests.cxx.o  -o cmTC_caeac 
+Building CXX object CMakeFiles/cmTC_f2d56.dir/feature_tests.cxx.o
+/bin/c++    -std=c++1z -o CMakeFiles/cmTC_f2d56.dir/feature_tests.cxx.o -c /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_f2d56
+/home/pobi/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f2d56.dir/link.txt --verbose=1
+/bin/c++       CMakeFiles/cmTC_f2d56.dir/feature_tests.cxx.o  -o cmTC_f2d56 
 gmake[1]: Leaving directory '/home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -387,14 +395,14 @@ gmake[1]: Leaving directory '/home/pobi/Downloads/Perceptron/cmake-build-debug/C
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/bin/gmake" "cmTC_13d10/fast"
-/bin/gmake -f CMakeFiles/cmTC_13d10.dir/build.make CMakeFiles/cmTC_13d10.dir/build
+Run Build Command:"/bin/gmake" "cmTC_3babc/fast"
+/bin/gmake -f CMakeFiles/cmTC_3babc.dir/build.make CMakeFiles/cmTC_3babc.dir/build
 gmake[1]: Entering directory '/home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_13d10.dir/feature_tests.cxx.o
-/bin/c++    -std=c++14 -o CMakeFiles/cmTC_13d10.dir/feature_tests.cxx.o -c /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_13d10
-/home/pobi/Downloads/clion-2017.3.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_13d10.dir/link.txt --verbose=1
-/bin/c++       CMakeFiles/cmTC_13d10.dir/feature_tests.cxx.o  -o cmTC_13d10 
+Building CXX object CMakeFiles/cmTC_3babc.dir/feature_tests.cxx.o
+/bin/c++    -std=c++14 -o CMakeFiles/cmTC_3babc.dir/feature_tests.cxx.o -c /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_3babc
+/home/pobi/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3babc.dir/link.txt --verbose=1
+/bin/c++       CMakeFiles/cmTC_3babc.dir/feature_tests.cxx.o  -o cmTC_3babc 
 gmake[1]: Leaving directory '/home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -460,14 +468,14 @@ gmake[1]: Leaving directory '/home/pobi/Downloads/Perceptron/cmake-build-debug/C
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/bin/gmake" "cmTC_183a7/fast"
-/bin/gmake -f CMakeFiles/cmTC_183a7.dir/build.make CMakeFiles/cmTC_183a7.dir/build
+Run Build Command:"/bin/gmake" "cmTC_e35fb/fast"
+/bin/gmake -f CMakeFiles/cmTC_e35fb.dir/build.make CMakeFiles/cmTC_e35fb.dir/build
 gmake[1]: Entering directory '/home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_183a7.dir/feature_tests.cxx.o
-/bin/c++    -std=c++11 -o CMakeFiles/cmTC_183a7.dir/feature_tests.cxx.o -c /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_183a7
-/home/pobi/Downloads/clion-2017.3.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_183a7.dir/link.txt --verbose=1
-/bin/c++       CMakeFiles/cmTC_183a7.dir/feature_tests.cxx.o  -o cmTC_183a7 
+Building CXX object CMakeFiles/cmTC_e35fb.dir/feature_tests.cxx.o
+/bin/c++    -std=c++11 -o CMakeFiles/cmTC_e35fb.dir/feature_tests.cxx.o -c /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_e35fb
+/home/pobi/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e35fb.dir/link.txt --verbose=1
+/bin/c++       CMakeFiles/cmTC_e35fb.dir/feature_tests.cxx.o  -o cmTC_e35fb 
 gmake[1]: Leaving directory '/home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -533,14 +541,14 @@ gmake[1]: Leaving directory '/home/pobi/Downloads/Perceptron/cmake-build-debug/C
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/bin/gmake" "cmTC_74ea8/fast"
-/bin/gmake -f CMakeFiles/cmTC_74ea8.dir/build.make CMakeFiles/cmTC_74ea8.dir/build
+Run Build Command:"/bin/gmake" "cmTC_fe2dd/fast"
+/bin/gmake -f CMakeFiles/cmTC_fe2dd.dir/build.make CMakeFiles/cmTC_fe2dd.dir/build
 gmake[1]: Entering directory '/home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_74ea8.dir/feature_tests.cxx.o
-/bin/c++    -std=c++98 -o CMakeFiles/cmTC_74ea8.dir/feature_tests.cxx.o -c /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_74ea8
-/home/pobi/Downloads/clion-2017.3.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_74ea8.dir/link.txt --verbose=1
-/bin/c++       CMakeFiles/cmTC_74ea8.dir/feature_tests.cxx.o  -o cmTC_74ea8 
+Building CXX object CMakeFiles/cmTC_fe2dd.dir/feature_tests.cxx.o
+/bin/c++    -std=c++98 -o CMakeFiles/cmTC_fe2dd.dir/feature_tests.cxx.o -c /home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_fe2dd
+/home/pobi/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fe2dd.dir/link.txt --verbose=1
+/bin/c++       CMakeFiles/cmTC_fe2dd.dir/feature_tests.cxx.o  -o cmTC_fe2dd 
 gmake[1]: Leaving directory '/home/pobi/Downloads/Perceptron/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 

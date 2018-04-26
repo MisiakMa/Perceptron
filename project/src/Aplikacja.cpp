@@ -18,8 +18,10 @@ int main(int argc, char **argv){
 
     //********************************Perceptron************************************
 	// Constants
-	double const normalizeLow = .0625;
-	double const normalizeHigh = .9375;
+
+
+	double const normalizeLow =0;// .0625;
+	double const normalizeHigh =1;// .9375;
 	// End of constants
 
 
@@ -27,18 +29,20 @@ int main(int argc, char **argv){
     ofstream Saver;
     ofstream Setup;
     ofstream Graph;
-    Saver.open("/home/pobi/Downloads/iad2-projekt/DataSet.txt");
-    Setup.open("/home/pobi/Downloads/iad2-projekt/Setup.txt");
-    Graph.open("/home/pobi/Downloads/iad2-projekt/Graph.txt");
-    char *ZestawTreningowy ="../data/data1.in"; //"../data/data1.in";
+    Saver.open("/home/pobi/Downloads/Perceptron/DataSet.txt");
+    Setup.open("/home/pobi/Downloads/Perceptron/Setup.txt");
+    Graph.open("/home/pobi/Downloads/Perceptron/Graph.txt");
+    char *ZestawTreningowy ="../data/iris.in"; //"../data/data1.in";
 	bool Bias = true;
-	double WspolczynnikNauki = 0.2;
+	double WspolczynnikNauki = 0.6;
 	double WspolczynnikMomentu = 0.0;
-	int IloscEpok = 1000;
+	int IloscEpok = 600;
     vector<unsigned int> layerSizes;
     layerSizes.push_back(4);
-    layerSizes.push_back(2);
+    layerSizes.push_back(3);
     layerSizes.push_back(4);
+    layerSizes.push_back(3);
+
 
 
 

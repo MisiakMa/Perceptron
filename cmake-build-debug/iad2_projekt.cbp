@@ -80,6 +80,15 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/pobi/Downloads/Perceptron/DataSet.txt">
+			<Option target="iad2_projekt"/>
+		</Unit>
+		<Unit filename="/home/pobi/Downloads/Perceptron/Graph.txt">
+			<Option target="iad2_projekt"/>
+		</Unit>
+		<Unit filename="/home/pobi/Downloads/Perceptron/Setup.txt">
+			<Option target="iad2_projekt"/>
+		</Unit>
 		<Unit filename="/home/pobi/Downloads/Perceptron/data/data1.in">
 			<Option target="iad2_projekt"/>
 		</Unit>

@@ -32,12 +32,15 @@ void DataManager::normalize(double const &low, double const &high) {
 	
 	for(unsigned int j = 0; j < wejscia; ++j)
 	{
+        // ustawienie wartosci max i min z danych wejsciowych
 		wejscieMin[j] = daneWejsciowe[0][j];
 		wejscieMax[j] = daneWejsciowe[0][j];
 	}
 	
 	for(unsigned int i = 1; i < sets; ++i)
 	{
+        // szukanie najmniejszej i najwiekszej wartosci w danych wejsciowych
+
 		for(unsigned int j = 0; j < wejscia; ++j)
 		{
 			if(daneWejsciowe[i][j] < wejscieMin[j])
@@ -55,11 +58,31 @@ void DataManager::normalize(double const &low, double const &high) {
 	{
 		if(wejscieMax[j] != wejscieMin[j])
 		{
-			wejscie1[j] = (high - low) / (wejscieMax[j] - wejscieMin[j]);
-			wejscie2[j] = low - wejscieMin[j] * wejscie1[j];
 
-			wektorWejsciowy1[j] = (wejscieMax[j] - wejscieMin[j]) / (high - low);
-			wektorWejsciowy2[j] = wejscieMin[j] - low * wektorWejsciowy1[j];
+            //dane wejsciowe oraz wektory danych wejsciowych
+            //TODO dobrze by bylo gdzies odszukac te wzory w internetach
+
+
+			wejscie1[j] =(high - low) / (wejscieMax[j] - wejscieMin[j]);
+			wejscie2[j] =low - wejscieMin[j] * wejscie1[j];
+
+            cout<<"Moje wejscie max: "<<wejscieMax[j]<<endl;
+            cout<<"Moje wejscie min: "<<wejscieMin[j]<<endl;
+            cout<<"wejscie 1  "<<wejscie1[j]<<endl;
+            cout<<"wejscie 2  "<<wejscie2[j]<<endl;
+
+
+
+
+            wektorWejsciowy1[j] =(wejscieMax[j] - wejscieMin[j]) / (high - low);
+            cout<<"wektor wejsciowy1  "<<wektorWejsciowy1[j] <<endl;
+
+
+			wektorWejsciowy2[j] =wejscieMin[j] - low * wektorWejsciowy1[j];
+            cout<<"wektor wejsciowy2  "<<wektorWejsciowy2[j] <<endl;
+
+
+
 		}
 		else
 		{
@@ -75,6 +98,7 @@ void DataManager::normalize(double const &low, double const &high) {
 		for(unsigned int j = 0; j < wejscia; ++j)
 		{
 			daneWejsciowe[i][j] = wejscie1[j] * daneWejsciowe[i][j] + wejscie2[j];
+
 		}
 	}
 
@@ -103,32 +127,27 @@ void DataManager::normalize(double const &low, double const &high) {
 	{
 		if(wyjscieMax[j] != wyjscieMin[j])
 		{
-			wyjscie1[j] = (high - low) / (wyjscieMax[j] - wyjscieMin[j]);
-			wyjscie2[j] = low - wyjscieMin[j] * wyjscie1[j];
-			wektorWyjsciowy1[j] = (wyjscieMax[j] - wyjscieMin[j]) / (high - low);
-			wektorWyjsciowy2[j] = wyjscieMin[j] - low * wektorWyjsciowy1[j];
+            //wedug mnie ustawienie wyjsc oraz wektorw wyjsciowych zatem zamiast wzoru wystarcza na
+            //sztywno wrzucone dane dla  data1  oraz iris poniewaz zasze dostaja na wyjsciu 1 lub 0
 
 
-			cout<<"high: "<<high<<endl;
-			cout<<"low: "<<low<<endl;
-			cout<<"wyjscieMax[j]: "<<wyjscieMax[j]<<endl;
-			cout<<"wyjscieMin[j]: "<<wyjscieMin[j]<<endl;
-			cout<<"low: "<<low<<endl;
-			cout<<"wyjscie1[j]: "<<wyjscie1[j]<<endl;
-			cout<<"wyjscie2[j]: "<<wyjscie2[j]<<endl;
-			cout<<"wektorWyjsciowy1[j]: "<<wektorWyjsciowy1[j] <<endl;
-			cout<<"wektorWyjsciowy2[j] : "<<wektorWyjsciowy2[j]<<endl<<endl<<endl;
+			//wyjscie1[j] =(high - low) / (wyjscieMax[j] - wyjscieMin[j]);
+			//wyjscie2[j] =low - wyjscieMin[j] * wyjscie1[j];
+			//wektorWyjsciowy1[j] =(wyjscieMax[j] - wyjscieMin[j]) / (high - low);
+			//wektorWyjsciowy2[j] =wyjscieMin[j] - low * wektorWyjsciowy1[j];
 
-
-
+            wyjscie1[j] =1;
+            wyjscie2[j] =0;
+            wektorWyjsciowy1[j] =1;
+            wektorWyjsciowy2[j] =0;
 
 		}
 		else
 		{
-			wyjscie1[j] = 1.0;
-			wyjscie2[j] = (low + high) * 0.5 - wyjscieMin[j];
-			wektorWyjsciowy1[j] = 1.0;
-			wektorWyjsciowy2[j] = wyjscieMin[j] - (low + high) * 0.5;
+			wyjscie1[j] = 1;
+			wyjscie2[j] =0;//              (low + high) * 0.5 - wyjscieMin[j];
+			wektorWyjsciowy1[j] = 1;
+			wektorWyjsciowy2[j] = 0;//        wyjscieMin[j] - (low + high) * 0.5;
 		}
 	}
 	
@@ -152,6 +171,8 @@ DataManager::DataManager(FILE * const &f, unsigned int const &inputs,
 	ignoreWhities(f);
 	fscanf(f, "%u %u %u", &dfInputs, &dfOutputs, &sets);  // metoda fscanf odczytuje dane ze strumienia
 	assert(dfInputs == inputs); // narzedzie bedu, jezeli wyrazenie jest rowne 0 to to zapisywany jest komunikat anulowania
+
+
 	assert(dfOutputs == outputs);
 	ignoreWhities(f);
 	
