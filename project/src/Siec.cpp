@@ -85,6 +85,10 @@ void Network::propagacjaWsteczna() {
 }
 
 void Network::dopasujWagi() {
+
+
+
+
 	for(unsigned int i = 1; i < layers.size(); ++i) {
 		unsigned int tSize = layers[i]->getSize() + withBias;
 		unsigned int ptSize = layers[i - 1]->getSize() + withBias;
@@ -97,6 +101,8 @@ void Network::dopasujWagi() {
                 layers[i]->ustawWage(j, k, weight + learning * err * out +
                                            momentum * dWeight);
                 layers[i]->ustawWage2(j, k, learning * err * out);
+
+
 			}
 		}
 	}
@@ -104,7 +110,8 @@ void Network::dopasujWagi() {
 
 void Network::simulate(vector<double> const &input,
 		vector<double> &output, vector<double> const &expected,
-		bool const &training) {
+		bool const &training)
+{
     ustawWejscia(input);
     propagacja();
     uzyskajWyjscie(output);
@@ -177,7 +184,7 @@ void Network::pokazWyjscia( ofstream &name)
         for(unsigned int j = withBias; j < tSize; ++j) {
 
 
-            name<<(PRInum_t, layers[i]->otrzymajWyjscie(j))<<" ";
+            name<<( layers[i]->otrzymajWyjscie(j))<<" ";
         }
 
         name<<")";
@@ -193,7 +200,7 @@ void Network::pokazWyjscia( ofstream &name)
 		for(unsigned int j = withBias; j < tSize; ++j) {
 
 
-            cout<<(PRInum_t, layers[i]->otrzymajWyjscie(j))<<" ";
+            cout<<( layers[i]->otrzymajWyjscie(j))<<" ";
 		}
 
         cout<<")";

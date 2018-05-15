@@ -80,9 +80,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/pobi/Downloads/Perceptron/AdrianWasHere">
-			<Option target="Perceptron"/>
-		</Unit>
 		<Unit filename="/home/pobi/Downloads/Perceptron/CMakeLists.txt">
 			<Option target="Perceptron"/>
 		</Unit>

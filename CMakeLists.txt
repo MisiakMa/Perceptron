@@ -32,7 +32,6 @@ set(SOURCE_FILES
         utils/opissieci.py
         utils/plotmaker.sh
         utils/przebieg.py
-        AdrianWasHere
         CMakeLists.txt
         DataSet.txt
         Fixed02.txt

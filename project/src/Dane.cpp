@@ -61,41 +61,37 @@ void DataManager::normalize(double const &low, double const &high) {
 		if(wejscieMax[j] != wejscieMin[j])
 		{
 
-            //dane wejsciowe oraz wektory danych wejsciowych
-            //TODO dobrze by bylo gdzies odszukac te wzory w internetach
+            //wzor no znowmalizowanie danych
 
 
 			wejscie1[j] =(high - low) / (wejscieMax[j] - wejscieMin[j]);
 			wejscie2[j] =low - wejscieMin[j] * wejscie1[j];
 
-            cout<<"wejscie1   "<<wejscie1[j]<<endl;
-            cout<<"wejscie2   "<<wejscie2[j]<<endl;
-            cout<<"wejscieMin   "<<wejscieMin[j]<<endl;
-            cout<<"wejscieMax   "<<wejscieMax[j]<<endl;
-
             wektorWejsciowy1[j] =(wejscieMax[j] - wejscieMin[j]) / (high - low);
 			wektorWejsciowy2[j] =wejscieMin[j] - low * wektorWejsciowy1[j];
-            cout<<"wektorWejsciowy1:  "<<wektorWejsciowy1[j]<<endl;
-            cout<<"wektorWejsciowy2:  "<<wektorWejsciowy2[j]<<endl;
-
-
 
 
 		}
 		else
 		{
+
 			wejscie1[j] = 1.0;
 			wejscie2[j] = (low + high) * 0.5 - wejscieMin[j];
 			wektorWejsciowy1[j] = 1.0;
 			wektorWejsciowy2[j] = wejscieMin[j] - (low + high) * 0.5;
+
 		}
 	}
-	
+	int w=0;
+
 	for(unsigned int i = 0; i < sets; ++i)
 	{
 		for(unsigned int j = 0; j < wejscia; ++j)
 		{
+
+            //znormaizowanie naszyh danych
 			daneWejsciowe[i][j] = wejscie1[j] * daneWejsciowe[i][j] + wejscie2[j];
+            //daneWejsciowe[i][j] = (daneWejsciowe[i][j]-wejscieMin[j])/(wejscieMax[j]-wejscieMin[j]);
 
 		}
 	}
@@ -125,27 +121,20 @@ void DataManager::normalize(double const &low, double const &high) {
 	{
 		if(wyjscieMax[j] != wyjscieMin[j])
 		{
-            //wedug mnie ustawienie wyjsc oraz wektorw wyjsciowych zatem zamiast wzoru wystarcza na
-            //sztywno wrzucone dane dla  data1  oraz iris poniewaz zasze dostaja na wyjsciu 1 lub 0
-
-
-			//wyjscie1[j] =(high - low) / (wyjscieMax[j] - wyjscieMin[j]);
-			//wyjscie2[j] =low - wyjscieMin[j] * wyjscie1[j];
-			//wektorWyjsciowy1[j] =(wyjscieMax[j] - wyjscieMin[j]) / (high - low);
-			//wektorWyjsciowy2[j] =wyjscieMin[j] - low * wektorWyjsciowy1[j];
 
             wyjscie1[j] =1;
             wyjscie2[j] =0;
+
             wektorWyjsciowy1[j] =1;
             wektorWyjsciowy2[j] =0;
 
 		}
 		else
 		{
-			wyjscie1[j] = 1;
-			wyjscie2[j] =0;//              (low + high) * 0.5 - wyjscieMin[j];
-			wektorWyjsciowy1[j] = 1;
-			wektorWyjsciowy2[j] = 0;//        wyjscieMin[j] - (low + high) * 0.5;
+			wyjscie1[j] = 1.0;
+			wyjscie2[j] =0;
+			wektorWyjsciowy1[j] = 1.0;
+			wektorWyjsciowy2[j] = 0;
 		}
 	}
 	
@@ -180,6 +169,8 @@ DataManager::DataManager(FILE * const &f, unsigned int const &inputs,
 	for(unsigned int i = 0; i < sets; ++i) {
 		daneWejsciowe[i].resize(inputs);
 		daneOczekiwane[i].resize(outputs);
+
+
 	}
 
 	ignoreWhities(f);
@@ -267,11 +258,14 @@ void DataManager::readTests(FILE * const &f)
 	{
 		wejscie1[i] = 1.0 / wektorWejsciowy1[i];
 		wejscie2[i] = -wektorWejsciowy2[i] / wektorWejsciowy1[i];
+
+
 	}
 	
 	for(unsigned int i = oldSz; i < sets; ++i) {
 		for(unsigned int j = 0; j < wejscia; ++j) {
 			daneWejsciowe[i][j] = wejscie1[j] * daneWejsciowe[i][j] + wejscie2[j];
+
 		}
 	}
 	
@@ -291,8 +285,10 @@ void DataManager::readTests(FILE * const &f)
 
 DataManager::DataManager(FILE * const &f, unsigned int const &inputs, unsigned int const &outputs)
 {
-	this->wejscia = inputs; // zapisanie wejscia
+	this->wejscia =inputs; // zapisanie wejscia
 	this->wyjscia = outputs;//zapisanie wyjscia
+
+
 	this->sets = 0;
 	
 	unsigned int dfInputs, dfOutputs;
@@ -335,6 +331,9 @@ DataManager::DataManager(FILE * const &f, unsigned int const &inputs, unsigned i
 DataManager::~DataManager() {}
 
 void DataManager::wyswietlenieWejscZdekodowanych(vector<double> const &data, ofstream &name) {
+
+
+
     name<<"( ";
     for(unsigned int i = 0; i < data.size(); ++i) {
 
@@ -346,8 +345,12 @@ void DataManager::wyswietlenieWejscZdekodowanych(vector<double> const &data, ofs
     cout<<"( ";
 	for(unsigned int i = 0; i < data.size(); ++i) {
 
+
 		cout<<" "<<(wektorWejsciowy1[i]*data[i]+wektorWejsciowy2[i]);
+
 	}
+
+
 
 	cout<<" )"<<endl;
 }
@@ -369,7 +372,7 @@ void DataManager::wyswietlenieWyjscZdekodowanych(vector<double> const &data, ofs
 
 
 		cout<<" "<<(wektorWyjsciowy1[i]*data[i]+wektorWyjsciowy2[i]);
-		//(wektorWyjsciowy1[i]*data[i]+wektorWyjsciowy2[i]);
+
 
 	}
 

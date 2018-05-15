@@ -12,404 +12,394 @@
 #include "Siec.hpp"
 #include "Dane.hpp"
 #include "Losowanie.hpp"
+
+
 using namespace std;
 
-int main(int argc, char **argv){
+int main(int argc, char **argv) {
 
     //********************************Perceptron************************************
-	// Constants
+    double const normalizeLow = 0.0;
+    double const normalizeHigh = 1.0;
 
 
-	double const normalizeLow = 0;//.0625;
-	double const normalizeHigh = 1;// .9375;
-	// End of constants
-
-
-	// Processed command line data
     ofstream Saver;
     ofstream Setup;
     ofstream Graph;
     Saver.open("/home/pobi/Downloads/Perceptron/DataSet.txt");
     Setup.open("/home/pobi/Downloads/Perceptron/Setup.txt");
     Graph.open("/home/pobi/Downloads/Perceptron/Graph.txt");
-    char *ZestawTreningowy ="../data/iris.in"; //"../data/data1.in";
-	bool Bias = true;
-	double WspolczynnikNauki = 0.6;
-	double WspolczynnikMomentu = 0.0;
-	int IloscEpok = 10;
+    char *ZestawTreningowy = "../data/iris.in";
+    bool Bias = true;
+
+    double WspolczynnikNauki = 0.1;
+    double WspolczynnikMomentu = 0.8;
+    int IloscEpok = 2000;
     vector<unsigned int> layerSizes;
     layerSizes.push_back(4);
     layerSizes.push_back(3);
-    layerSizes.push_back(4);
     layerSizes.push_back(3);
 
 
 
 
-
-
-
-	double epsilon = -1;
-	char *WagiWejsciowe = NULL;
-	char *WagiWyjsciowe = NULL;  // zapis
-
-	bool randomize = true;
-	char *TestWejscia = NULL;
-	char *logFN = NULL;
-	bool verbose = true;
-	int logFreq = 1;
-	int syFlag = 1;
-	int snFlag = 1;
-	int ltFlag = 1;
-	int lnFlag = 1;
+    bool randomize = true;
+    char *TestWejscia = NULL;
+    char *logFN = NULL;
+    bool verbose = true;
+    int logFreq = 1;   // co ile ma skakac epok
+    int syFlag = 0;  // pokazanie danych wejsciowych wyjsciowych oczekiwanych
+    int snFlag = 0; // opis iteracji sieci
+    int ltFlag = 1;  //wyniki koncowe
+    int lnFlag = 0;  // opis sieci po szkoleniu
+    double epsilon = -1;
+    char *WagiWejsciowe = NULL;
+    char *WagiWyjsciowe = NULL;
 
 
 
 
 
-	bool noErrors = true;
-	//Logger *lgr;
-	//lgr = new Logger(logFN, verbose);
-	
-
-	for(int i = 0; i < argc; ++i)
-    {
-        cout<<argv[i]<<endl;
-        cout<<" "<<endl;
-	}
-
-    cout<<endl;
-    cout<<" -------------------------------"<<endl;
-    cout<<"|Konfiguracja\t\t\t\t\t|"<<endl;
-    cout<<"|Bias: "<<Bias<<"\t\t\t\t\t\t|"<<endl;
-    cout<<"|Wspolczynnik uczenia: "<<WspolczynnikNauki<<"\t\t|"<<endl;
-    cout<<"|Wspolczynnik momentum: "<<WspolczynnikMomentu<<"\t\t|"<<endl;
-    cout<<"|Ilosc epok: "<<IloscEpok<<"\t\t\t\t|"<<endl;
-    cout<<" --------------------------------"<<endl;
+    bool noErrors = true;
 
 
-    cout<<" ---------------------------------------------"<<endl;
-	if(ZestawTreningowy != NULL)
-    {
-        cout<<"|Zestaw treningowy z pliku: "<<ZestawTreningowy<<"  |"<<endl;
-	}
+    cout << endl;
+    cout << " -------------------------------" << endl;
+    cout << "|Konfiguracja\t\t\t\t\t|" << endl;
+    cout << "|Bias: " << Bias << "\t\t\t\t\t\t|" << endl;
+    cout << "|Wspolczynnik uczenia: " << WspolczynnikNauki << "\t\t|" << endl;
+    cout << "|Wspolczynnik momentum: " << WspolczynnikMomentu << "\t\t|" << endl;
+    cout << "|Ilosc epok: " << IloscEpok << "\t\t\t\t|" << endl;
+    cout << " --------------------------------" << endl;
 
-    cout<<"|Konfiguracja warstw: ";
-	for(unsigned int i = 0; i < layerSizes.size(); ++i)
-    {
-        cout<<layerSizes[i]<<" ";
-	}
-    cout<<"\t\t\t\t  |";
 
-    cout<<endl;
-    cout<<" ---------------------------------------------"<<endl;
+    cout << " ---------------------------------------------" << endl;
+    if (ZestawTreningowy != NULL) {
+        cout << "|Zestaw treningowy z pliku: " << ZestawTreningowy << "  |" << endl;
+    }
+
+    cout << "|Konfiguracja warstw: ";
+    for (unsigned int i = 0; i < layerSizes.size(); ++i) {
+        cout << layerSizes[i] << " ";
+    }
+    cout << "\t\t\t\t  |";
+
+    cout << endl;
+    cout << " ---------------------------------------------" << endl;
 
 
 
 
-	// Work with the network
-	if(noErrors)
-    {
-		Network *nn;
-		DataManager *dm = NULL;
-		nn = new Network(layerSizes, WspolczynnikMomentu, WspolczynnikNauki, Bias);
-		
-		// Preloading wagi
-		if(WagiWejsciowe != NULL) {
-			FILE *weightsInFile = fopen(WagiWejsciowe, "r");
-			dm = new DataManager(weightsInFile, layerSizes.front(), layerSizes.back());
+    // Work with the network
+    if (noErrors) {
+        Network *nn;
+        DataManager *dm = NULL;
+        nn = new Network(layerSizes, WspolczynnikMomentu, WspolczynnikNauki, Bias);
+
+        // Preloading wagi
+        if (WagiWejsciowe != NULL) {
+            FILE *weightsInFile = fopen(WagiWejsciowe, "r");
+            dm = new DataManager(weightsInFile, layerSizes.front(), layerSizes.back());
             nn->obciazeniaWag(weightsInFile);
-			fclose(weightsInFile);
-		}
-		// End of preloading wagi
+            fclose(weightsInFile);
+        }
+        // End of preloading wagi
 
 
-       // cout<<"Poczatkowy opis sieci"<<endl;
-		//nn->opis(lgr);   // przechodzi do network.cpp
-       // cout<<"Koniec poczatkowego opisu sieci"<<endl<<endl;
+        // cout<<"Poczatkowy opis sieci"<<endl;
+        //nn->opis(lgr);   // przechodzi do network.cpp
+        // cout<<"Koniec poczatkowego opisu sieci"<<endl<<endl;
 
-		
-		// Training
-		if(ZestawTreningowy != NULL)
-        {
 
-			int epoch = 0;
-			double epochErr = 0; // blad w epoce
-			FILE *trainingFile = fopen(ZestawTreningowy, "r");  // plikdo odczytu
-			vector<unsigned int> order;
-			
-			// Loading training sets
-			if(dm == NULL) {
-				dm = new DataManager(trainingFile, layerSizes.front(), layerSizes.back(), normalizeLow, normalizeHigh);
-			}
-            else
-            {
-				dm->readTests(trainingFile);
-			}
-			// End of loading training sets
-            cout<<"*****************************************************"<<endl;
-            cout<<"*     Nauka z szybkoscia uczenia sie: "<<WspolczynnikNauki<<"\t\t\t*"<<endl;
-            cout<<"*     Wspolczynnik momentu: "<<WspolczynnikMomentu<<"\t\t\t\t\t\t*"<<endl;
-            cout<<"*****************************************************"<<endl;
+        // Training
+        if (ZestawTreningowy != NULL) {
 
-			if(IloscEpok >= 0) {
+            int epoch = 0;
+            double epochErr = 0; // blad w epoce
+            FILE *trainingFile = fopen(ZestawTreningowy, "r");  // plikdo odczytu
+            vector<unsigned int> order;
 
-                cout<<"Zatrzymanie w epoce: "<<IloscEpok<<endl;
-				if(epsilon > 0.0)
+            // Loading training sets
+            if (dm == NULL) {
+                dm = new DataManager(trainingFile, layerSizes.front(), layerSizes.back(), normalizeLow, normalizeHigh);
+            } else {
+                dm->readTests(trainingFile);
+            }
+            // End of loading training sets
+            cout << "*****************************************************" << endl;
+            cout << "*     Nauka z szybkoscia uczenia sie: " << WspolczynnikNauki << "\t\t\t*" << endl;
+            cout << "*     Wspolczynnik momentu: " << WspolczynnikMomentu << "\t\t\t\t\t\t*" << endl;
+            cout << "*****************************************************" << endl;
+
+            if (IloscEpok >= 0) {
+
+                cout << "Zatrzymanie w epoce: " << IloscEpok << endl;
+                if (epsilon > 0.0) {
+                    cout << " lub gdy powstanie najgorszy test epoki " << endl;
+                } else {
+                    cout << endl;
+                }
+            } else {
+                cout << "Wykona najgorszy test epoki" << endl;
+            }
+
+
+            for (unsigned int j = 0; j < dm->getSize(); ++j) {
+                order.push_back(j);
+            }
+            // End of preparing sorted order
+
+            // Simulating epochs
+            while ((epoch < IloscEpok || IloscEpok < 0) && (epochErr > epsilon)) {
+
+
+                float sredniBlad=0;
+                epochErr = 0.0;
+                if (randomize) {
+                    Losowanie::getInstance().shuffle(order);
+                }
+                if (epoch % logFreq == 0) {
+                    Graph << "Epoka: " << epoch;
+                    Saver << "Epoka: " << epoch;
+                    cout << "Epoka:  " << epoch;
+                }
+                for (unsigned int j = 0; j < dm->getSize(); ++j)
                 {
-                    cout<<" lub gdy powstanie najgorszy test epoki "<<endl;
-				}
-                else
-                {
-                    cout<<endl;
-				}
-			}
-            else
-            {
-                cout<<"Wykona najgorszy test epoki"<<endl;
-			}
 
 
-			for(unsigned int j = 0; j < dm->getSize(); ++j)
-            {
-				order.push_back(j);
-			}
-			// End of preparing sorted order
-			
-			// Simulating epochs
-			while((epoch < IloscEpok || IloscEpok < 0) && (epochErr > epsilon))
-            {
-				epochErr = 0.0;
-				if(randomize)
-                {
-					Losowanie::getInstance().shuffle(order);
-				}
-				if(epoch % logFreq == 0)
-                {
-                    Graph <<"Epoka: " << epoch;
-                    Saver <<"Epoka: "<< epoch;
-                    cout<<"Epoka:  "<<epoch;
-				}
-				for(unsigned int j = 0; j < dm->getSize(); ++j)
-                {
-					unsigned int cur = order[j];
-					std::vector<double> output;
-					double err;
-					nn->simulate(dm->getInputVector(cur), output, dm->getExpectedVector(cur), true);
-					err = nn->getError();
-					if(err > epochErr)
+                    unsigned int cur = order[j];
+                    std::vector<double> output;
+                    double err;
+                    nn->simulate(dm->getInputVector(cur), output, dm->getExpectedVector(cur), true);
+                    err = nn->getError();
+                    if (err > epochErr) {
+                        epochErr = err;
+                    }
+                    if (epoch % logFreq == 0)
                     {
-						epochErr = err;
-					}
-					if(epoch % logFreq == 0)
-                    {
-						// Displaying calculation
-						if(syFlag) {
-                            cout<<endl;
-                            Saver<<"Nasze dane wejscowe: ";
-                            cout<<"Nasze dane wejsciowe:  ";
-                            dm->wyswietlenieWejscZdekodowanych( dm->getInputVector(cur), Saver);
+                        // Displaying calculation
+                        if (syFlag) {
+                            cout << endl;
+                            Saver << "Nasze dane wejscowe: ";
+                            cout << "Nasze dane wejsciowe:  ";
+                            dm->wyswietlenieWejscZdekodowanych(dm->getInputVector(cur), Saver);
 
-                            Saver <<"Nasz oczekiwany wynik: ";
-                            cout<<"Nasz oczekiwany wynik: ";
+                            Saver << "Nasz oczekiwany wynik: ";
+                            cout << "Nasz oczekiwany wynik: ";
                             dm->wyswietlenieWyjscZdekodowanych(dm->getExpectedVector(cur), Saver);
 
-                            Saver<<"Nasz obliczony wynik: ";
-                            cout<<"Nasz obliczony wynik:  ";
-                            dm->wyswietlenieWyjscZdekodowanych( output, Saver);
+                            Saver << "Nasz obliczony wynik: ";
+                            cout << "Nasz obliczony wynik:  ";
+                            dm->wyswietlenieWyjscZdekodowanych(output, Saver);
 
-                            Saver <<"Jak zmieniala sie siec wedlug warstw: ";
-                            cout<<"Jak zmieniala sie siec wedlug warstw: ";
-                            nn->pokazWyjscia( Saver);
+                            Saver << "Jak zmieniala sie siec wedlug warstw: ";
+                            cout << "Jak zmieniala sie siec wedlug warstw: ";
+                            nn->pokazWyjscia(Saver);
+                            cout << endl;
+
+                        }
+
+                        Saver << "   Blad sieci: " << epochErr;
+                        //Graph << "  " << err;
+                        sredniBlad+=err;
+
+
+
+
+                        if (snFlag) {
+                            /*
+                            cout<<"\n\nIteracja sieci: ";
+							nn->opis(lgr);
                             cout<<endl;
 
-						}
-                        Graph << "  " << err;
-                        Saver <<"\nBlad sieci: " << err << endl;
-                        Saver << "\n";
-                        cout<<"Blad sieci: "<<err<<endl;
+                            cout<<"Koniec sieci iteracyjnej"<<endl;
+                             */
+                        }
+                        // End of detailed network description
+                    }
 
-						
 
-						if(snFlag)
-                        {
+                }
 
-                           // cout<<"\n\nIteracja sieci: ";
-							//nn->opis(lgr);
-                           // cout<<endl;
+                if (epoch % logFreq == 0) {
+                    Saver << "\nKoniec epoki " << epoch << endl;
+                    cout << "\nKoniec epoki " << epoch << endl;
+                }
+                sredniBlad=sredniBlad/dm->getSize();
+                Graph << "  " << sredniBlad;
 
-                           // cout<<"Koniec sieci iteracyjnej"<<endl;
-						}
-						// End of detailed network description
-					}
-				}
-				if(epoch % logFreq == 0)
-                {
-                    Saver <<"\nKoniec epoki "<< epoch <<endl;
-                    cout<<"\nKoniec epoki "<< epoch<<endl;
-				}
+
                 Graph << endl;
-				++epoch;
 
-			}
-			// End of simulating epochs
-			
-			// Training finish explaination
-			if(epoch >= IloscEpok && IloscEpok >= 0 && epochErr <= epsilon)
-            {
-                Saver<<"Trening zakonczony poniewaz epoka doszla do numeru: "<<epoch<<"i otrzymanie bledu nie wiekszego niz: "
-                    <<epsilon<<endl;
-                cout<<"Trening zakonczony poniewaz epoka doszla do numeru: "<<epoch<<"i otrzymanie bledu nie wiekszego niz: "
-                <<epsilon<<endl;
-			} else if(epoch >= IloscEpok && IloscEpok >= 0)
-            {
-                Saver<<"Trening zakonczony poniewaz epoka doszla do numeru: "<<epoch<<endl;
-                cout<<"Trening zakonczony poniewaz epoka doszla do numeru: "<<epoch<<endl;
-			}
-            else
-            {
-                Saver<<"Trening zakonczy siz powodu usyskania bledow"<<endl;
-                cout<<"Trening zakonczy siz powodu usyskania bledow"<<endl;
-			}
-			// End of training finish explaination
-			
-			// Detailed network description
-			if(lnFlag)
-            {
-                Saver<<"Opis sieci po szkoleniu: " << endl;
-                cout<<"Opis sieci po szkoleniu: "<<endl;
-				nn->opis( Setup);
-                Saver <<"Koniec opisu sieci: "<<endl;
-               cout<<"Koniec opisu sieci: "<<endl;
-			}
-			// End of detailed network description
-			
-			
-			// Testing the whole training set once more (without WspolczynnikNauki)
-			if(ltFlag)
-            {
-                Saver<<"Szkolenie ustala wyniki koncowe"<<endl;
-                cout<<"Szkolenie ustala wyniki koncowe"<<endl;
-			}
-			//epochErr = 0.0;
-			for(unsigned int j = 0; j < dm->getSize(); ++j) {
-				unsigned int cur = j;
-				std::vector<double> output;
-				double err;
-				nn->simulate(dm->getInputVector(cur), output, dm->getExpectedVector(cur), false);
-				err = nn->getError();
-				if(err > epochErr)
-                {
-					epochErr = err;
-				}
-				if(ltFlag) {
+                ++epoch;
+
+            }
+            // End of simulating epochs
+
+            // Training finish explaination
+            if (epoch >= IloscEpok && IloscEpok >= 0 && epochErr <= epsilon) {
+                Saver << "Trening zakonczony poniewaz epoka doszla do numeru: " << epoch
+                      << "i otrzymanie bledu nie wiekszego niz: "
+                      << epsilon << endl;
+                cout << "Trening zakonczony poniewaz epoka doszla do numeru: " << epoch
+                     << "i otrzymanie bledu nie wiekszego niz: "
+                     << epsilon << endl;
+            } else if (epoch >= IloscEpok && IloscEpok >= 0) {
+                Saver << "Trening zakonczony poniewaz epoka doszla do numeru: " << epoch << endl;
+                cout << "Trening zakonczony poniewaz epoka doszla do numeru: " << epoch << endl;
+            } else {
+                Saver << "Trening zakonczy siz powodu usyskania bledow" << endl;
+                cout << "Trening zakonczy siz powodu usyskania bledow" << endl;
+            }
+            // End of training finish explaination
+
+            // Detailed network description
+            if (lnFlag) {
+                Saver << "Opis sieci po szkoleniu: " << endl;
+                cout << "Opis sieci po szkoleniu: " << endl;
+                nn->opis(Setup);
+                Saver << "Koniec opisu sieci: " << endl;
+                cout << "Koniec opisu sieci: " << endl;
+            }
+            // End of detailed network description
+
+
+            // Testing the whole training set once more (without WspolczynnikNauki)
+            if (ltFlag) {
+                Saver << "Szkolenie ustala wyniki koncowe" << endl;
+                cout << "Szkolenie ustala wyniki koncowe" << endl;
+            }
+            //epochErr = 0.0;
+            for (unsigned int j = 0; j < dm->getSize(); ++j) {
+                unsigned int cur = j;
+                std::vector<double> output;
+                double err;
+                nn->simulate(dm->getInputVector(cur), output, dm->getExpectedVector(cur), false);
+                err = nn->getError();
+                if (err > epochErr) {
+                    epochErr = err;
+                }
+                if (ltFlag) {
                     Saver << "\nNasze dane wejsciowe: ";
-                    cout<<endl;
-                    cout<<"Nasze dane wejsciowe:  ";
-                    dm->wyswietlenieWejscZdekodowanych( dm->getInputVector(cur), Saver);
+                    cout << endl;
+                    cout << "Nasze dane wejsciowe:  ";
+                    dm->wyswietlenieWejscZdekodowanych(dm->getInputVector(cur), Saver);
 
-                    Saver<<"Nasz oczekiwany wynik: ";
-                    cout<<"Nasz oczekiwany wynik: ";
-                    dm->wyswietlenieWyjscZdekodowanych(dm->getExpectedVector(cur),Saver);
-                    Saver<<"Nasz obliczony wynik:   ";
-                    cout<<"Nasz obliczony wynik:   ";
-                    dm->wyswietlenieWyjscZdekodowanych( output,Saver);
+                    Saver << "Nasz oczekiwany wynik: ";
+                    cout << "Nasz oczekiwany wynik: ";
+                    dm->wyswietlenieWyjscZdekodowanych(dm->getExpectedVector(cur), Saver);
+                    Saver << "Nasz obliczony wynik:   ";
+                    cout << "Nasz obliczony wynik:   ";
+                    dm->wyswietlenieWyjscZdekodowanych(output, Saver);
 
-                    Saver<<"Jak zmieniala sie siec wedlug warstw: ";
-                    cout<<"Jak zmieniala sie siec wedlug warstw: ";
-                    nn->pokazWyjscia( Saver);
-                    cout<<endl;
-                    Saver<<endl;
-                    Saver<<"Blad sieci: "<<err <<endl;
-                    cout<<"Blad sieci: "<<err<<endl;
+                    Saver << "Jak zmieniala sie siec wedlug warstw: ";
+                    cout << "Jak zmieniala sie siec wedlug warstw: ";
+                    nn->pokazWyjscia(Saver);
+                    cout << endl;
+                    // Graph << "  " << epochErr;
+                    Saver << endl;
+                    Saver << "Blad sieci: " << epochErr << endl;
+                    //cout << "Blad sieci: " << err << endl;
 
-				}
-			}
+                }
+            }
 
-            cout<<endl;
-			if(ltFlag)
-            {
-                Saver <<"Koniec treningu wyznacza ostateczne wynik\n"<<endl;
-                cout<<"Koniec treningu wyznacza ostateczne wyniki\n"<<endl;
-			}
-            Saver<<"Największy błąd w zbiorze treningowym: "<<(PRInum_t,epochErr)<<endl;
-            cout<<"Największy błąd w zbiorze treningowym: "<<(PRInum_t,epochErr)<<endl;
+            cout << endl;
+            if (ltFlag) {
+                Saver << "Koniec treningu wyznacza ostateczne wynik\n" << endl;
+                cout << "Koniec treningu wyznacza ostateczne wyniki\n" << endl;
+            }
 
-			
-			fclose(trainingFile);
-			
-			// Weihts serialization
-			if(WagiWyjsciowe != NULL) {
-				FILE *weightsOutFile = fopen(WagiWyjsciowe, "w"); // tryb w tworzy plik do zapisu
+            Saver << "Największy błąd w zbiorze treningowym: " << (PRInum_t, epochErr) << endl;
+            cout << "Największy błąd w zbiorze treningowym: " << (PRInum_t, epochErr) << endl;
+
+
+            fclose(trainingFile);
+
+            // Weihts serialization
+            if (WagiWyjsciowe != NULL) {
+                FILE *weightsOutFile = fopen(WagiWyjsciowe, "w"); // tryb w tworzy plik do zapisu
                 dm->serializacja(weightsOutFile);
                 nn->serializujWagi(weightsOutFile);
-				fclose(weightsOutFile);
-			}
-			// End of wagi serialization
-		}
-		// End of training
-		
-		// Test propagation
-		if(TestWejscia != NULL)
-        {
-			FILE *testInFile = fopen(TestWejscia, "r"); // tryb r otwiera plik w trybie do odczytu
-			unsigned int trainingEnd = dm->getSize();
-			double epochErr = 0.0;
-			
-			dm->readTests(testInFile);
-			
-			// Processing the test set
-			if(ltFlag)
-            {
-                cout<<"Wyniki dla zestawu testowego"<<endl;
-			}
-			for(unsigned int j = trainingEnd; j < dm->getSize(); ++j)
-            {
-				unsigned int cur = j;
-				std::vector<double> output;
-				double err;
-				nn->simulate(dm->getInputVector(cur), output, dm->getExpectedVector(cur), false);
-				err = nn->getError();
-				if(err > epochErr)
-                {
-					epochErr = err;
-				}
+                fclose(weightsOutFile);
+            }
+            // End of wagi serialization
+        }
+        // End of training
 
-                cout<<endl;
-                dm->wyswietlenieWejscZdekodowanych( dm->getInputVector(cur), Saver);
+        // Test propagation
+        if (TestWejscia != NULL) {
+            FILE *testInFile = fopen(TestWejscia, "r"); // tryb r otwiera plik w trybie do odczytu
+            unsigned int trainingEnd = dm->getSize();
+            double epochErr = 0.0;
+
+            dm->readTests(testInFile);
+
+            // Processing the test set
+            if (ltFlag) {
+                cout << "Wyniki dla zestawu testowego" << endl;
+            }
+            for (unsigned int j = trainingEnd; j < dm->getSize(); ++j) {
+                unsigned int cur = j;
+                std::vector<double> output;
+                double err;
+                nn->simulate(dm->getInputVector(cur), output, dm->getExpectedVector(cur), false);
+                err = nn->getError();
+                if (err > epochErr) {
+                    epochErr = err;
+                }
+
+                cout << endl;
+                dm->wyswietlenieWejscZdekodowanych(dm->getInputVector(cur), Saver);
 
 
-                cout<<"Nasze dane wejsciowe:  ";
-                dm->wyswietlenieWyjscZdekodowanych( dm->getExpectedVector(cur),Saver);
+                cout << "Nasze dane wejsciowe:  ";
+                dm->wyswietlenieWyjscZdekodowanych(dm->getExpectedVector(cur), Saver);
 
 
-                cout<<"Nasz oczekiwany wynik: ";
-                dm->wyswietlenieWyjscZdekodowanych( output,Saver);
+                cout << "Nasz oczekiwany wynik: ";
+                dm->wyswietlenieWyjscZdekodowanych(output, Saver);
 
 
-                cout<<"Jak zmieniala sie siec wedlug warstw: ";
-                nn->pokazWyjscia( Saver);
-                cout<<endl;
+                cout << "Jak zmieniala sie siec wedlug warstw: ";
+                nn->pokazWyjscia(Saver);
+                cout << endl;
 
-                cout<<"Blad sieci: "<<err<<endl;
-			}
+                cout << "Blad sieci: " << err << endl;
+            }
 
-            cout<<endl;
-			if(ltFlag)
-            {
-                cout<<"Koniec wynikow dla zestawu testowego"<<endl;
-			}
+            cout << endl;
+            if (ltFlag) {
+                cout << "Koniec wynikow dla zestawu testowego" << endl;
+            }
 
-            cout<<"Najwiekszy blad w zestawie testowym: "<<epochErr<<endl;
+            cout << "Najwiekszy blad w zestawie testowym: " << epochErr << endl;
 
-			
-			fclose(testInFile);
-		}
-		// End of test propagation
-		
-		if(dm != NULL) delete dm;
-		delete nn;
-	}
+
+            fclose(testInFile);
+        }
+        // End of test propagation
+
+        if (dm != NULL) delete dm;
+        delete nn;
+    }
+
+
+    delete [] WagiWejsciowe;
+    delete [] WagiWyjsciowe;
+    delete [] logFN;
+    delete [] TestWejscia;
+
+
+
+
+
+
+   // ZestawTreningowy = "../data/data1.in";
+
     Saver.close();
     Setup.close();
-    Graph.close(); }
+    Graph.close();
+
+
+}
